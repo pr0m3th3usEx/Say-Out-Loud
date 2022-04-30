@@ -61,4 +61,6 @@
     <color name="brown_600">#FF8D5F0C</color>
     <color name="brown_700">#FF82570A</color>
     <color name="brown_800">#FF764F09</color>
+
+    <color name="transparent">#00000000</color>
 </resources>
