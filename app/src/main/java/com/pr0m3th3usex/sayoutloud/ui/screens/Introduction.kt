@@ -27,6 +27,8 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.pr0m3th3usex.sayoutloud.R
+import com.pr0m3th3usex.sayoutloud.ui.components.LargeTextButton
+import com.pr0m3th3usex.sayoutloud.ui.theme.ButtonColor
 import com.pr0m3th3usex.sayoutloud.ui.theme.Gold100
 import com.pr0m3th3usex.sayoutloud.ui.theme.IntroGradient
 import com.pr0m3th3usex.sayoutloud.ui.theme.SayOutLoudTheme
@@ -74,36 +76,13 @@ fun Introduction(navController: NavHostController) {
                     horizontalAlignment = Alignment.CenterHorizontally,
                     verticalArrangement = Arrangement.spacedBy(12.dp),
                 ) {
-                    Button(onClick = {},
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .clip(
-                                RoundedCornerShape(corner = CornerSize(18.dp))
-                            )
-                    ) {
-                        Text(
-                            stringResource(R.string.onboarding_login_btn).uppercase(),
-                            color = Color.White,
-                            fontWeight = FontWeight.Bold,
-                            modifier = Modifier.padding(vertical = 12.dp)
-                        )
-                    }
-                    Button(
-                        onClick = {},
-                        colors = ButtonDefaults.buttonColors(backgroundColor = Color.White),
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .clip(
-                                RoundedCornerShape(corner = CornerSize(18.dp))
-                            )
-                    ) {
-                        Text(
-                            stringResource(R.string.onboarding_signup_btn).uppercase(),
-                            color = Color.Black,
-                            fontWeight = FontWeight.Bold,
-                            modifier = Modifier.padding(vertical = 12.dp)
-                        )
-                    }
+                    LargeTextButton(
+                        text = stringResource(id = R.string.onboarding_login_btn)
+                    )
+                    LargeTextButton(
+                        text = stringResource(id = R.string.onboarding_signup_btn),
+                        whiteVersion = true
+                    )
                 }
             }
         }
