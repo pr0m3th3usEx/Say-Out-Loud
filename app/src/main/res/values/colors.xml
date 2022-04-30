@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="gray_100">#FFE3E3E3</color>
+    <color name="gray_200">#FFC6C6C6</color>
+    <color name="gray_300">#FFAAAAAA</color>
+    <color name="gray_400">#FF8E8E8E</color>
+    <color name="gray_500">#FF717171</color>
+    <color name="gray_600">#FF555555</color>
+    <color name="gray_700">#FF393939</color>
+    <color name="gray_800">#FF1C1C1C</color>
+
+    <color name="red_100">#FFFF7965</color>
+    <color name="red_200">#FFFF614B</color>
+    <color name="red_300">#FFFF4A30</color>
+    <color name="red_400">#FFFF3418</color>
+    <color name="red_500">#FFF82409</color>
+    <color name="red_600">#FFDC1F07</color>
+    <color name="red_700">#FFC11B05</color>
+    <color name="red_800">#FFA51704</color>
+
+    <color name="green_100">#FFD3F05A</color>
+    <color name="green_200">#FFCCEE41</color>
+    <color name="green_300">#FFC5EC2B</color>
+    <color name="green_400">#FFB9E31C</color>
+    <color name="green_500">#FFA5CA18</color>
+    <color name="green_600">#FF91B115</color>
+    <color name="green_700">#FF7C9812</color>
+    <color name="green_800">#FF677E0F</color>
+
+    <color name="blue_100">#FF5AD7DB</color>
+    <color name="blue_200">#FF43D1D6</color>
+    <color name="blue_300">#FF29CCD1</color>
+    <color name="blue_400">#FF21BBC0</color>
+    <color name="blue_500">#FF1DA6AA</color>
+    <color name="blue_600">#FF1A9195</color>
+    <color name="blue_700">#FF167D80</color>
+    <color name="blue_800">#FF13686B</color>
+
+    <color name="gold_100">#FFF6B93B</color>
+    <color name="gold_200">#FFF7B334</color>
+    <color name="gold_300">#FFF7AE2A</color>
+    <color name="gold_400">#FFF6AA20</color>
+    <color name="gold_500">#FFF6A618</color>
+    <color name="gold_600">#FFEC9F16</color>
+    <color name="gold_700">#FFE09714</color>
+    <color name="gold_800">#FFD48F13</color>
+
+    <color name="brown_100">#FFC98711</color>
+    <color name="brown_200">#FFBD7F11</color>
+    <color name="brown_300">#FFB1770F</color>
+    <color name="brown_400">#FFA66F0E</color>
+    <color name="brown_500">#FF9A670C</color>
+    <color name="brown_600">#FF8D5F0C</color>
+    <color name="brown_700">#FF82570A</color>
+    <color name="brown_800">#FF764F09</color>
+</resources>

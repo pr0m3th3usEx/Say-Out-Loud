@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Say Out Loud</string>
+    <string name="app_slogan">Share your thoughts&#13;Express yourself&#13;Feel better</string>
+    
+    <string name="next_btn">Next</string>
+    <string name="publish_btn">Publish</string>
+
+    <string name="onboarding_end_btn">Start now !</string>
+    <string name="onboarding_login_btn">Log in</string>
+    <string name="onboarding_signup_btn">Sign up</string>
+
+    <string name="onboarding_forgotten_password">I have forgotten my password</string>
+    <string name="onboarding_create_account_link">Not registered ? Create your account now !</string>
+
+    <string name="onboarding_email_form_label">Enter your email address :</string>
+    <string name="onboarding_username_form_label">Enter a username :</string>
+    <string name="onbaording_password_form_label">Enter your password :</string>
+    <string name="onboarding_confirm_password_form_label">Repeat your password :</string>
+
+    <string name="onboarding_email_form_placeholder">Ex: hello@sayoutloud.io</string>
+    <string name="onboarding_username_form_placeholder">Ex: Mo0dUp</string>
+    <string name="onboarding_password_form_placeholder">Minimum 8 characters</string>
+    <string name="onboarding_confirm_password_form_placeholder">Minimum 8 characters</string>
+
+    <string name="onboarding_title_login_form">Welcome back !</string>
+    <string name="onboarding_title_email_form">Become a SOL Speaker</string>
+    <string name="onboarding_title_username_form">How do you want to be called ?</string>
+    <string name="onboarding_title_password_form">Protect yourself</string>
+
+    <string name="record_idle_state">Speak Out Loud !!!</string>
+    <string name="record_recording_state">Recording ...</string>
+    <string name="record_recorded_state">Recorded !</string>
+
+    <string name="record_replay_tooltip_msg">Replay</string>
+    <string name="record_retry_tooltip_msg">Retry</string>
+
+    <string name="record_title_form_labe">Title of your record:</string>
+    <string name="record_private_switch_label">Private</string>
+
+    <string name="setting_page_title">Settings</string>
+    <string name="records_page_title">Records</string>
+    <string name="publish_page_title">Publish</string>
+
+    <string name="profile_records_list_title">Your records</string>
+</resources>
