@@ -39,7 +39,6 @@ fun SayOutLoudTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Compos
         LightColorPalette
     }
     systemUiController.setStatusBarColor(color = colors.background)
-
     MaterialTheme(
         colors = colors,
         typography = Typography,

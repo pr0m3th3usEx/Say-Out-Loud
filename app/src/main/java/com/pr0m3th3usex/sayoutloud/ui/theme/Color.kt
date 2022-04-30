@@ -71,3 +71,11 @@ val SolGradient = Brush.verticalGradient(
         Color(0xB3fa9438)
     )
 )
+
+val IntroGradient = Brush.verticalGradient(
+    colors = listOf(
+        Color(0xFFF6B93B),
+        Color(0xA1F9D383),
+        Color(0x20CECDCB)
+    )
+)
