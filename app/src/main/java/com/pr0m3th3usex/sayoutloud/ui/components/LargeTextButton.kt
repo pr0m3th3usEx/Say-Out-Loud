@@ -19,13 +19,13 @@ import com.pr0m3th3usex.sayoutloud.R
 import com.pr0m3th3usex.sayoutloud.ui.theme.ButtonColor
 
 @Composable
-fun LargeTextButton(text: String, whiteVersion: Boolean = false, onClick: () -> Unit = {}) {
+fun LargeTextButton(modifier: Modifier = Modifier, text: String, whiteVersion: Boolean = false, onClick: () -> Unit = {}) {
     Button(
         onClick,
         colors = ButtonDefaults.buttonColors(
             backgroundColor = if (whiteVersion) Color.White else ButtonColor,
         ),
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth()
             .clip(
                 RoundedCornerShape(corner = CornerSize(18.dp))

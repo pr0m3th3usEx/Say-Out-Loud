@@ -28,6 +28,15 @@ val Pacifico = FontFamily(
     Font(R.font.pacifico_regular)
 )
 
+// Text Styles
+
+val Placeholder = TextStyle(
+    fontFamily = Oxygen,
+    fontSize = 14.sp,
+    color = Brown500,
+)
+
+
 // Set of Material typography styles to start with
 val Typography = Typography(
     h1 = TextStyle(
