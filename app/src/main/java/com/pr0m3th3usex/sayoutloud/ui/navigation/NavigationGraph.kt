@@ -1,6 +1,5 @@
 package com.pr0m3th3usex.sayoutloud.ui.navigation
 
-import android.window.SplashScreen
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost

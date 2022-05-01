@@ -9,7 +9,7 @@ sealed class Screen(val route: String) {
     object SignUpUsername : Screen("signup-username")
     object SignUpPassword : Screen("signup-password")
     object Profile : Screen("profile")
-    object SettingsHome: Screen("settings-home")
+    object SettingsHome : Screen("settings-home")
     object Record : Screen("record")
     object Publish : Screen("publish")
 }

@@ -11,9 +11,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.drawWithCache
 import androidx.compose.ui.draw.rotate
-import androidx.compose.ui.graphics.BlendMode
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
@@ -22,7 +20,6 @@ import androidx.navigation.NavHostController
 import com.pr0m3th3usex.sayoutloud.R
 import com.pr0m3th3usex.sayoutloud.ui.navigation.Screen
 import com.pr0m3th3usex.sayoutloud.ui.theme.SayOutLoudTheme
-import com.pr0m3th3usex.sayoutloud.ui.theme.SolGradient
 import kotlinx.coroutines.delay
 
 @Composable
