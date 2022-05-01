@@ -1,0 +1,15 @@
+name: CD Android App
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - develop
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy app on Play Store
+        run: echo "Deploy app on Play Store"
