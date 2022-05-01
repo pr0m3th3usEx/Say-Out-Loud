@@ -1,8 +1,6 @@
 package com.pr0m3th3usex.sayoutloud.ui.components
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.shape.CornerSize
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -10,7 +8,6 @@ import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.OutlinedTextField
 import androidx.compose.material.Text
-import androidx.compose.material.TextField
 import androidx.compose.material.TextFieldDefaults
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
@@ -59,8 +56,8 @@ fun CustomTextField(
         keyboardOptions = KeyboardOptions(keyboardType = keyboardType, imeAction = imeAction),
         enabled = isEnabled,
         colors = TextFieldDefaults.outlinedTextFieldColors(
-            textColor = Placeholder.color,
-            focusedBorderColor = Placeholder.color,
+                    textColor = Placeholder.color,
+                    focusedBorderColor = Placeholder.color,
             unfocusedBorderColor = Color.Unspecified,
             disabledBorderColor = Color.Unspecified,
             disabledTextColor = Color.Black,
@@ -73,7 +70,7 @@ fun CustomTextField(
 }
 
 @Composable
-@Preview()
+@Preview
 fun CustomTextFieldPreview() {
     CustomTextField(text = "", placeholder = "Placeholder")
 }

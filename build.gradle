@@ -7,7 +7,37 @@ plugins {
     id 'com.android.application' version '7.1.1' apply false
     id 'com.android.library' version '7.1.1' apply false
     id 'org.jetbrains.kotlin.android' version '1.5.21' apply false
+    id 'org.jlleitschuh.gradle.ktlint' version '9.2.1' apply true
 }
+
+subprojects {
+    apply plugin: "org.jlleitschuh.gradle.ktlint"
+
+    ktlint {
+        debug = true
+    }
+}
+
+ktlint {
+    android.set(true)
+    // debug.set(true)
+    // verbose.set(true)
+    outputToConsole.set(true)
+    outputColorName.set("RED")
+    // additionalEditorconfigFile = file(".editorconfig")
+
+    filter {
+        exclude("**/build/**")
+        include("**/kotlin/**")
+    }
+}
+
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
 
 task clean(type: Delete) {
     delete rootProject.buildDir
