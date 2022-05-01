@@ -28,6 +28,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.pr0m3th3usex.sayoutloud.R
 import com.pr0m3th3usex.sayoutloud.ui.components.LargeTextButton
+import com.pr0m3th3usex.sayoutloud.ui.navigation.Screen
 import com.pr0m3th3usex.sayoutloud.ui.theme.ButtonColor
 import com.pr0m3th3usex.sayoutloud.ui.theme.Gold100
 import com.pr0m3th3usex.sayoutloud.ui.theme.IntroGradient
@@ -77,11 +78,17 @@ fun Introduction(navController: NavHostController) {
                     verticalArrangement = Arrangement.spacedBy(12.dp),
                 ) {
                     LargeTextButton(
-                        text = stringResource(id = R.string.onboarding_login_btn)
+                        text = stringResource(id = R.string.onboarding_login_btn),
+                        onClick = {
+                            navController.navigate(route = Screen.Login.route)
+                        }
                     )
                     LargeTextButton(
                         text = stringResource(id = R.string.onboarding_signup_btn),
-                        whiteVersion = true
+                        whiteVersion = true,
+                        onClick = {
+                            navController.navigate(route = Screen.SignUpEmail.route)
+                        }
                     )
                 }
             }
