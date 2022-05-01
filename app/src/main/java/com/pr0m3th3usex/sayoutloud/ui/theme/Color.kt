@@ -65,9 +65,19 @@ val Blue600 = Color(0xFF1A9195)
 val Blue700 = Color(0xFF167D80)
 val Blue800 = Color(0xFF13686B)
 
+val ButtonColor = Color(0xFFF4A70D)
+
 val SolGradient = Brush.verticalGradient(
     colors = listOf(
         Color(0xFFF6B93B),
         Color(0xB3fa9438)
+    )
+)
+
+val IntroGradient = Brush.verticalGradient(
+    colors = listOf(
+        Color(0xFFF6B93B),
+        Color(0xA1F9D383),
+        Color(0x20CECDCB)
     )
 )

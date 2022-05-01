@@ -24,9 +24,17 @@ val Oxygen = FontFamily(
     Font(R.font.oxygen_light, FontWeight.Light)
 )
 
+val Pacifico = FontFamily(
+    Font(R.font.pacifico_regular)
+)
+
 // Set of Material typography styles to start with
 val Typography = Typography(
     h1 = TextStyle(
+        fontFamily = Pacifico,
+        fontSize = 32.sp
+    ),
+    h2 = TextStyle(
         fontFamily = RedHatDisplay,
         fontWeight = FontWeight.Bold,
         fontSize = 32.sp
