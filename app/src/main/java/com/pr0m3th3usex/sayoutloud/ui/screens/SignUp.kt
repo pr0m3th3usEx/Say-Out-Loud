@@ -1,9 +1,7 @@
 package com.pr0m3th3usex.sayoutloud.ui.screens
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.*
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
@@ -11,8 +9,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
+import com.google.accompanist.insets.ProvideWindowInsets
 import com.pr0m3th3usex.sayoutloud.R
+import com.pr0m3th3usex.sayoutloud.ui.components.CustomTextField
+import com.pr0m3th3usex.sayoutloud.ui.components.LargeTextButton
 import com.pr0m3th3usex.sayoutloud.ui.components.OnBoardingHeader
+import com.pr0m3th3usex.sayoutloud.ui.navigation.Screen
 import com.pr0m3th3usex.sayoutloud.ui.theme.SayOutLoudTheme
 
 object SignUp {
@@ -24,12 +26,38 @@ object SignUp {
                 modifier = Modifier
                     .fillMaxSize()
                     .background(MaterialTheme.colors.background)
-                    .padding(vertical = 12.dp, horizontal = 24.dp)
+                    .padding(vertical = 12.dp, horizontal = 12.dp)
             ) {
                 Surface(
                     modifier = Modifier.fillMaxSize()
                 ) {
-                    OnBoardingHeader(text = stringResource(id = R.string.onboarding_title_email_form))
+                    Column(
+                        verticalArrangement = Arrangement.SpaceBetween,
+                        modifier  = Modifier
+                            .background(MaterialTheme.colors.background)
+                            .fillMaxSize()
+                    ) {
+                        OnBoardingHeader(
+                            modifier = Modifier.weight(2f),
+                            text = stringResource(id = R.string.onboarding_title_email_form)
+                        )
+
+                        ProvideWindowInsets {
+                            Column(modifier = Modifier.weight(2f)) {
+                                CustomTextField(
+                                    text = "",
+                                    placeholder = "Email",
+                                )
+                            }
+
+                            LargeTextButton(
+                                text = stringResource(id = R.string.next_btn),
+                                onClick = {
+                                    navController.navigate(Screen.SignUpUsername.route)
+                                }
+                            )
+                        }
+                    }
                 }
             }
         }
@@ -42,12 +70,38 @@ object SignUp {
                 modifier = Modifier
                     .fillMaxSize()
                     .background(MaterialTheme.colors.background)
-                    .padding(vertical = 12.dp, horizontal = 24.dp)
+                    .padding(vertical = 12.dp, horizontal = 12.dp)
             ) {
                 Surface(
                     modifier = Modifier.fillMaxSize()
                 ) {
-                    OnBoardingHeader(text = stringResource(id = R.string.onboarding_title_username_form))
+                    Column(
+                        verticalArrangement = Arrangement.SpaceBetween,
+                        modifier  = Modifier
+                            .background(MaterialTheme.colors.background)
+                            .fillMaxSize()
+                    ) {
+                        OnBoardingHeader(
+                            modifier = Modifier.weight(2f),
+                            text = stringResource(id = R.string.onboarding_title_username_form)
+                        )
+
+                        ProvideWindowInsets {
+                            Column(modifier = Modifier.weight(2f)) {
+                                CustomTextField(
+                                    text = "",
+                                    placeholder = "Username",
+                                )
+                            }
+
+                            LargeTextButton(
+                                text = stringResource(id = R.string.next_btn),
+                                onClick = {
+                                    navController.navigate(Screen.SignUpPassword.route)
+                                }
+                            )
+                        }
+                    }
                 }
             }
         }
@@ -60,12 +114,45 @@ object SignUp {
                 modifier = Modifier
                     .fillMaxSize()
                     .background(MaterialTheme.colors.background)
-                    .padding(vertical = 12.dp, horizontal = 24.dp)
+                    .padding(vertical = 12.dp, horizontal = 12.dp)
             ) {
                 Surface(
                     modifier = Modifier.fillMaxSize()
                 ) {
-                    OnBoardingHeader(text = stringResource(id = R.string.onboarding_title_password_form))
+                    Column(
+                        verticalArrangement = Arrangement.SpaceBetween,
+                        modifier  = Modifier
+                            .background(MaterialTheme.colors.background)
+                            .fillMaxSize()
+                    ) {
+                        OnBoardingHeader(
+                            modifier = Modifier.weight(2f),
+                            text = stringResource(id = R.string.onboarding_title_username_form)
+                        )
+
+                        ProvideWindowInsets {
+                            Column(
+                                modifier = Modifier.weight(2f),
+                                verticalArrangement = Arrangement.spacedBy(16.dp)
+                            ) {
+                                CustomTextField(
+                                    text = "",
+                                    placeholder = stringResource(id = R.string.onboarding_password_form_placeholder),
+                                )
+                                CustomTextField(
+                                    text = "",
+                                    placeholder = stringResource(id = R.string.onboarding_password_form_placeholder),
+                                )
+                            }
+
+                            LargeTextButton(
+                                text = stringResource(id = R.string.onboarding_end_btn),
+                                onClick = {
+                                    navController.navigate(Screen.Home.route)
+                                }
+                            )
+                        }
+                    }
                 }
             }
         }
