@@ -78,22 +78,22 @@ fun Login(navController: NavHostController) {
                                 modifier = Modifier.clickable { }
                             )
                         }
-                    }
-                    Row(
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.Center,
-                        modifier = Modifier.fillMaxSize().weight(1f)
-                    ){
-                        Text(
-                            text = "Not registered ? Create your account now !",
-                            textAlign = TextAlign.Center,
-                            modifier = Modifier
-                                .clickable {
-                                    navController.popBackStack()
-                                    navController.navigate(Screen.SignUpEmail.route)
-                                },
-                            color = ButtonColor,
-                        )
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.Center,
+                            modifier = Modifier.fillMaxSize().weight(1f)
+                        ){
+                            Text(
+                                text = "Not registered ? Create your account now !",
+                                textAlign = TextAlign.Center,
+                                modifier = Modifier
+                                    .clickable {
+                                        navController.popBackStack()
+                                        navController.navigate(Screen.SignUpEmail.route)
+                                    },
+                                color = ButtonColor,
+                            )
+                        }
                     }
                 }
             }
