@@ -1,4 +1,4 @@
-package com.pr0m3th3usex.sayoutloud.ui.screens
+package com.pr0m3th3usex.sayoutloud.ui.screens.auth
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -6,6 +6,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
@@ -109,6 +110,8 @@ object SignUp {
 
     @Composable
     fun Password(navController: NavHostController) {
+        val context = LocalContext.current
+
         SayOutLoudTheme() {
             Box(
                 modifier = Modifier
@@ -148,7 +151,6 @@ object SignUp {
                             LargeTextButton(
                                 text = stringResource(id = R.string.onboarding_end_btn),
                                 onClick = {
-                                    navController.navigate(Screen.Home.route)
                                 }
                             )
                         }

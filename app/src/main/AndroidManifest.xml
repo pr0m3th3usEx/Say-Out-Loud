@@ -11,11 +11,15 @@
         android:theme="@style/Theme.SayOutLoud">
         <activity
             android:name=".MainActivity"
+            android:exported="false"
+            android:label="@string/title_activity_main"
+            android:theme="@style/Theme.SayOutLoud" />
+        <activity
+            android:name=".IntroActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.SayOutLoud"
-            android:windowSoftInputMode="adjustResize"
-        >
+            android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
