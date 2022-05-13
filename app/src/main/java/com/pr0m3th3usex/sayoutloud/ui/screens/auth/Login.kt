@@ -1,5 +1,6 @@
 package com.pr0m3th3usex.sayoutloud.ui.screens.auth
 
+import android.app.Activity
 import android.content.Intent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -78,6 +79,7 @@ fun Login(navController: NavHostController) {
                             Spacer(Modifier.size(14.dp))
                             LargeTextButton(text = "Log in", onClick = {
                                 context.startActivity(Intent(context, MainActivity::class.java))
+                                (context as? Activity)?.finish()
                             })
                             Text(
                                 text = "I have forgotten my password",
