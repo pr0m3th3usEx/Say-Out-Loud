@@ -12,6 +12,7 @@ import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import com.pr0m3th3usex.sayoutloud.ui.navigation.Screen
+import com.pr0m3th3usex.sayoutloud.ui.theme.Gold400
 
 @Composable
 fun CustomBottomBar(navController: NavHostController) {
@@ -25,7 +26,7 @@ fun CustomBottomBar(navController: NavHostController) {
     val currentDestination = navBackStackEntry?.destination
 
     BottomNavigation(
-        backgroundColor = MaterialTheme.colors.primary,
+        backgroundColor = Gold400,
         contentColor = if (isSystemInDarkTheme()) Color.White else Color.Black,
     ) {
         screens.forEach {
@@ -60,6 +61,5 @@ fun RowScope.AddItem(
             it.route === screen.route
         } === true,
         alwaysShowLabel = false,
-
     )
 }

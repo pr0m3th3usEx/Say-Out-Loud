@@ -48,6 +48,15 @@ val Typography = Typography(
         fontWeight = FontWeight.Bold,
         fontSize = 32.sp
     ),
+    h3 = TextStyle(
+        fontFamily = RedHatDisplay,
+        fontWeight = FontWeight.Normal,
+        fontSize = 24.sp
+    ),
+    h6 = TextStyle(
+        fontFamily = Pacifico,
+        fontSize = 24.sp
+    ),
     body1 = TextStyle(
         fontFamily = RedHatDisplay,
         fontWeight = FontWeight.Normal,
