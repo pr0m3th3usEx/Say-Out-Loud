@@ -1,26 +1,18 @@
-package com.pr0m3th3usex.sayoutloud.ui.screens
+package com.pr0m3th3usex.sayoutloud.ui.screens.auth
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.shape.CornerSize
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.drawWithCache
-import androidx.compose.ui.graphics.BlendMode
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontStyle
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.text.style.TextGeometricTransform
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
@@ -29,8 +21,6 @@ import androidx.navigation.compose.rememberNavController
 import com.pr0m3th3usex.sayoutloud.R
 import com.pr0m3th3usex.sayoutloud.ui.components.LargeTextButton
 import com.pr0m3th3usex.sayoutloud.ui.navigation.Screen
-import com.pr0m3th3usex.sayoutloud.ui.theme.ButtonColor
-import com.pr0m3th3usex.sayoutloud.ui.theme.Gold100
 import com.pr0m3th3usex.sayoutloud.ui.theme.IntroGradient
 import com.pr0m3th3usex.sayoutloud.ui.theme.SayOutLoudTheme
 

@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Say Out Loud</string>
     <string name="app_slogan">Share your thoughts\nExpress yourself\nFeel better</string>
-    
+
     <string name="next_btn">Next</string>
     <string name="publish_btn">Publish</string>
 
@@ -37,9 +37,21 @@
     <string name="record_title_form_labe">Title of your record:</string>
     <string name="record_private_switch_label">Private</string>
 
-    <string name="setting_page_title">Settings</string>
-    <string name="records_page_title">Records</string>
     <string name="publish_page_title">Publish</string>
 
     <string name="profile_records_list_title">Your records</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="intro_page_title">Introduction</string>
+    <string name="splash_page_title">SplashScreen</string>
+    <string name="login_page_title">Login</string>
+    <string name="signup_email_page_title">Sign Up</string>
+    <string name="signup_username_page_title">Sign Up</string>
+    <string name="signup_pswd_page_title">Sign Up</string>
+
+    <string name="profile_page_title">Profile</string>
+    <string name="record_page_title">Record</string>
+    <string name="home_page_title">Home</string>
+
+    <string name="settings_page_title">Settings</string>
 </resources>
