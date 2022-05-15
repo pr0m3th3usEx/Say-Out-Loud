@@ -22,11 +22,9 @@ fun MainScreen(navController: NavHostController) {
     val context = LocalContext.current;
     val systemUiController = rememberSystemUiController()
     systemUiController.setNavigationBarColor(Gold400)
+    // CustomTopBar(title = "Say Out Loud", modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp), titleTextStyle = MaterialTheme.typography.h6)
 
     Scaffold(
-        topBar = {
-             CustomTopBar(title = "Say Out Loud", modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp), titleTextStyle = MaterialTheme.typography.h6)
-        },
         bottomBar = {
             CustomBottomBar(navController)
         }

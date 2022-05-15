@@ -77,7 +77,7 @@ fun Introduction(navController: NavHostController) {
                         text = stringResource(id = R.string.onboarding_signup_btn),
                         whiteVersion = true,
                         onClick = {
-                            navController.navigate(route = Screen.SignUpEmail.route)
+                            navController.navigate(route = Screen.SignUp.route)
                         }
                     )
                 }
