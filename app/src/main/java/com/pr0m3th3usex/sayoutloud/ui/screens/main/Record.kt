@@ -7,6 +7,7 @@ import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.Icon
+import androidx.compose.material.IconButton
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.*
@@ -17,10 +18,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.pr0m3th3usex.sayoutloud.R
+import com.pr0m3th3usex.sayoutloud.ui.components.RecordActionBar
 import com.pr0m3th3usex.sayoutloud.ui.components.RecordButton
 import com.pr0m3th3usex.sayoutloud.ui.theme.SolGradient
 
@@ -40,10 +43,21 @@ fun Record(navController: NavHostController) {
     ) {
         var recordingStatus by remember { mutableStateOf(RecordingStatus.IDLE) }
 
+        if (recordingStatus == RecordingStatus.RECORDING || recordingStatus == RecordingStatus.RECORDED) {
+            RecordActionBar(
+                modifier = Modifier.align(Alignment.TopCenter),
+                recordingStatus = recordingStatus,
+                time = 35999999L,
+                onCancel = {
+                    recordingStatus = RecordingStatus.IDLE
+                }
+            )
+        }
+
         Text(
             modifier = Modifier
                 .align(Alignment.TopCenter)
-                .padding(top = 120.dp),
+                .padding(top = 100.dp),
             text = recordingStatus.title, style = MaterialTheme.typography.h2, color = Color.White, textAlign = TextAlign.Center
         )
 
@@ -53,7 +67,7 @@ fun Record(navController: NavHostController) {
                 recordingStatus = RecordingStatus.RECORDING
             },
             onRelease = {
-                recordingStatus = RecordingStatus.IDLE
+                recordingStatus = RecordingStatus.RECORDED
             }
         )
     }
