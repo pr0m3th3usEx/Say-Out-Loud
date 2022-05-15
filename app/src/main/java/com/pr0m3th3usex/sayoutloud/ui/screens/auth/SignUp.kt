@@ -54,7 +54,7 @@ object SignUp {
                             LargeTextButton(
                                 text = stringResource(id = R.string.next_btn),
                                 onClick = {
-                                    navController.navigate(Screen.SignUpUsername.route)
+                                    navController.navigate(Screen.Username.route)
                                 }
                             )
                         }
@@ -98,7 +98,7 @@ object SignUp {
                             LargeTextButton(
                                 text = stringResource(id = R.string.next_btn),
                                 onClick = {
-                                    navController.navigate(Screen.SignUpPassword.route)
+                                    navController.navigate(Screen.Password.route)
                                 }
                             )
                         }

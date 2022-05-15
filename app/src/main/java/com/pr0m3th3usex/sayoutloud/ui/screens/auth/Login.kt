@@ -98,7 +98,7 @@ fun Login(navController: NavHostController) {
                                 modifier = Modifier
                                     .clickable {
                                         navController.popBackStack()
-                                        navController.navigate(Screen.SignUpEmail.route)
+                                        navController.navigate(Screen.SignUp.route)
                                     },
                                 color = ButtonColor,
                             )
