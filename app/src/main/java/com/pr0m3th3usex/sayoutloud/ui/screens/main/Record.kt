@@ -77,7 +77,7 @@ fun Record(navController: NavHostController, setIsBottomBarVisible: (v: Boolean)
         } else {
             Column(modifier = Modifier.padding(horizontal = 12.dp).align(Alignment.BottomEnd)) {
                 LargeTextButton(
-                    text = stringResource(R.string.publish_btn),
+                    text = stringResource(R.string.next_btn),
                     onClick = {
                         setIsBottomBarVisible(true)
                         navController.navigate(Screen.Publish.route)
