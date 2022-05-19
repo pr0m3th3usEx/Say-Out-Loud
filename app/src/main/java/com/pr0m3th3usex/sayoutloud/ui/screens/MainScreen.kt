@@ -6,7 +6,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
+import androidx.compose.material.rememberScaffoldState
+import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
@@ -24,11 +25,16 @@ fun MainScreen(navController: NavHostController) {
     systemUiController.setNavigationBarColor(Gold400)
     // CustomTopBar(title = "Say Out Loud", modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp), titleTextStyle = MaterialTheme.typography.h6)
 
+    var isBottomBarVisible by remember { mutableStateOf(true) }
+
     Scaffold(
         bottomBar = {
-            CustomBottomBar(navController)
+            if (isBottomBarVisible)
+                CustomBottomBar(navController)
         }
     ) {
-        MainNavigationGraph(navController = navController)
+        MainNavigationGraph(navController = navController, setIsBottomBarVisible = { v ->
+            isBottomBarVisible = v
+        })
     }
 }
