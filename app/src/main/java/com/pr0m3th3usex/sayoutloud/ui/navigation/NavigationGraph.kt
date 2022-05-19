@@ -11,6 +11,7 @@ import com.pr0m3th3usex.sayoutloud.ui.screens.auth.Introduction
 import com.pr0m3th3usex.sayoutloud.ui.screens.auth.Login
 import com.pr0m3th3usex.sayoutloud.ui.screens.auth.SignUp
 import com.pr0m3th3usex.sayoutloud.ui.screens.main.Profile
+import com.pr0m3th3usex.sayoutloud.ui.screens.main.Publish
 import com.pr0m3th3usex.sayoutloud.ui.screens.main.Record
 import com.pr0m3th3usex.sayoutloud.ui.screens.main.settings.Settings
 
@@ -35,18 +36,22 @@ object NavigationGraph {
     }
 
     @Composable
-    fun MainNavigationGraph(navController: NavHostController, startDestination: String =  "home") {
+    fun MainNavigationGraph(navController: NavHostController, startDestination: String = "home", setIsBottomBarVisible: (v: Boolean) -> Unit = {}) {
         NavHost(navController, startDestination) {
             composable(route = Screen.Home.route) {
                 Home(navController)
             }
 
             composable(route = Screen.Record.route) {
-                Record(navController)
+                Record(navController, setIsBottomBarVisible)
             }
 
             composable(route = Screen.Profile.route) {
                 Profile(navController)
+            }
+
+            composable(route = Screen.Publish.route) {
+                Publish(navController)
             }
 
             settingsGraph(navController)
