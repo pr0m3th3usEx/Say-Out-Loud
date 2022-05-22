@@ -31,7 +31,9 @@ object NavigationGraph {
                 Login(navController)
             }
 
-            signUpGraph(navController)
+            composable(route = Screen.SignUp.route) {
+                SignUp.SignUpStepper(navController)
+            }
         }
     }
 
@@ -62,22 +64,6 @@ object NavigationGraph {
         navigation(startDestination = Screen.SettingsHome.route, route = Screen.Settings.route) {
             composable(route =  Screen.SettingsHome.route) {
                 Settings.Home(navController)
-            }
-        }
-    }
-
-    private fun NavGraphBuilder.signUpGraph(navController: NavHostController) {
-        navigation(startDestination = Screen.Email.route, route = Screen.SignUp.route) {
-            composable(route = Screen.Email.route) {
-                SignUp.Email(navController)
-            }
-
-            composable(route = Screen.Username.route) {
-                SignUp.Username(navController)
-            }
-
-            composable(route = Screen.Password.route) {
-                SignUp.Password(navController)
             }
         }
     }

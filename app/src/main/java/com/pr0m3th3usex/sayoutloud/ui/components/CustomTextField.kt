@@ -21,6 +21,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.pr0m3th3usex.sayoutloud.ui.theme.Brown500
 import com.pr0m3th3usex.sayoutloud.ui.theme.Placeholder
+import com.pr0m3th3usex.sayoutloud.ui.theme.Red200
 
 @Composable
 fun CustomTextField(
@@ -34,6 +35,7 @@ fun CustomTextField(
     keyboardType: KeyboardType = KeyboardType.Text,
     keyboardActions: KeyboardActions = KeyboardActions(),
     isEnabled: Boolean = true,
+    isInvalid: Boolean = false,
 ) {
     var hasBorder by  remember { mutableStateOf(false) }
 
@@ -62,7 +64,9 @@ fun CustomTextField(
             disabledBorderColor = Color.Unspecified,
             disabledTextColor = Color.Black,
             cursorColor = Placeholder.color,
+            errorBorderColor = Red200,
         ),
+        isError = isInvalid,
         visualTransformation = visualTransformation,
         shape = RoundedCornerShape(corner = CornerSize(18.dp)),
         singleLine = true,
@@ -73,4 +77,10 @@ fun CustomTextField(
 @Preview
 fun CustomTextFieldPreview() {
     CustomTextField(text = "", placeholder = "Placeholder")
+}
+
+@Composable
+@Preview
+fun ErrorCustomTextFieldPreview() {
+    CustomTextField(text = "fdf", placeholder = "Error field", isInvalid = true)
 }

@@ -18,12 +18,15 @@ import androidx.navigation.NavHostController
 import com.pr0m3th3usex.sayoutloud.R
 import com.pr0m3th3usex.sayoutloud.ui.components.CustomTextField
 import com.pr0m3th3usex.sayoutloud.ui.components.CustomTopBar
+import com.pr0m3th3usex.sayoutloud.ui.components.LabelWrapper
 import com.pr0m3th3usex.sayoutloud.ui.components.LargeTextButton
 import com.pr0m3th3usex.sayoutloud.ui.navigation.Screen
 
 @Composable
 fun Publish(navController: NavHostController) {
-    Box(modifier = Modifier.fillMaxSize().padding(bottom = 96.dp, start = 12.dp, end = 12.dp)) {
+    Box(modifier = Modifier
+        .fillMaxSize()
+        .padding(bottom = 96.dp, start = 12.dp, end = 12.dp)) {
         Column(
             modifier = Modifier.fillMaxSize(),
         ) {
@@ -47,8 +50,8 @@ fun Publish(navController: NavHostController) {
                     textAlign = TextAlign.Center
                 )
             }
-            Column {
-                CustomTextField(text = "", placeholder = "Title of your record")
+            LabelWrapper(label = "Title of your record :") {
+                CustomTextField(text = "", placeholder = "Ex: My best life pt. 1", isInvalid = it)
             }
         }
         LargeTextButton(
